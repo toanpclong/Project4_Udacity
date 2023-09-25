@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 2;
+}
+
+section {
+  max-width: 700px;
+  margin: 50px auto;
+  em {
+    font-size: 25px;
+  }
+}
+#polarityResults,
+#subjectivityResults,
+#textResults {
+  font-size: 18px;
+  color: goldenrod;
+  margin-top: 10px;
+}

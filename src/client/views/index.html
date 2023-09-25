@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="">
+            Logo
+        </div>
+        <div class="">
+            navigation
+        </div>
+    </header>
+    <main>
+        <section>
+            <form class="form">
+                <input id="name" type="text" name="input" value="" placeholder="Name" />
+                <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" />
+            </form>
+        </section>
+
+        <section>
+            <em>Form Results:</em>
+            <ul>
+                <li id="polarityResults">Polarity: </li>
+                <li id="subjectivityResults">Subjectivity: </li>
+                <li id="textResults">Text: </li>
+            </ul>
+
+        </section>
+        <footer>
+            <p>This is a footer</p>
+        </footer>
+    </main>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
